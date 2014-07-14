@@ -46,7 +46,7 @@ import java.util.List;
 public class CdmaLteServiceStateTracker extends CdmaServiceStateTracker {
     private CDMALTEPhone mCdmaLtePhone;
     private final CellInfoLte mCellInfoLte;
-
+    protected int mNewRilRadioTechnology = 0;
     private CellIdentityLte mNewCellIdentityLte = new CellIdentityLte();
     private CellIdentityLte mLasteCellIdentityLte = new CellIdentityLte();
 

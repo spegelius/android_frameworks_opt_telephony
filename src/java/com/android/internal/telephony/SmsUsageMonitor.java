@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.res.XmlResourceParser;
 import android.database.ContentObserver;
+import android.net.Uri;
 import android.os.Binder;
 import android.os.Handler;
 import android.os.Process;
@@ -108,7 +109,7 @@ public class SmsUsageMonitor {
     public static final int PREMIUM_SMS_PERMISSION_ALWAYS_ALLOW = 3;
 
     private final int mCheckPeriod;
-    private final int mMaxAllowed;
+    private int mMaxAllowed;
 
     private final HashMap<String, ArrayList<Long>> mSmsStamp =
             new HashMap<String, ArrayList<Long>>();

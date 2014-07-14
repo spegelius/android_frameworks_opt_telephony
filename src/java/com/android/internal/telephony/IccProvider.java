@@ -164,6 +164,9 @@ public class IccProvider extends ContentProvider {
 
     private String normalizeValue(String inVal) {
         int len = inVal.length();
+        if (len == 0) {
+            return inVal;
+        }
         String retVal = inVal;
 
         if (inVal.charAt(0) == '\'' && inVal.charAt(len-1) == '\'') {
